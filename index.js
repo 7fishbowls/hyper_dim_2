@@ -13,9 +13,6 @@ connectDB();
 app.get("/", (req, res) => {
   res.send("Hello world!");
 });
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 
 app.use("/fetch_researches", fetch_researches);
